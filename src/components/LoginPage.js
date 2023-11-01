@@ -71,7 +71,7 @@ export default function LoginPage() {
         </div>
 
         <div>
-          <PhoneInput country={'us'} value={phoneNum} onChange={handleChange} className='Input min-w-[414px]' inputProps={{
+          <PhoneInput country={'in'} value={phoneNum} onChange={handleChange} className='Input min-w-[414px]' inputProps={{
             name: 'phone',
             required: true,
           }}

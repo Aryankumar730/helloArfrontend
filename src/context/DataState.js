@@ -27,9 +27,7 @@ export default function DataState(props) {
           
           const json = await response.json();
           console.log(json);
-
           setResponseId(json.requestId);
-
           return json.requestId;
          
     }

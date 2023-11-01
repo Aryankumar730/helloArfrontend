@@ -12,8 +12,8 @@ body {
 }
 
 
-.Input::-webkit-inner-spin-button,
-.Input::-webkit-outer-spin-button {
+.inputBox::-webkit-inner-spin-button,
+.inputBox::-webkit-outer-spin-button {
   display: none;
   
 }

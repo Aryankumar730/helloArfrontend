@@ -157,14 +157,14 @@ export default function OtpPage() {
 
           <p className=' text-[38px] font-medium text-primary'>OTP Verification</p>
 
-          <p className=' text-xs font-normal text-secondary mt-2'>We have sent and OTP to +919889898989. Please enter the code received to verify.</p>
+          <p className=' text-xs font-normal text-secondary mt-2'>We have sent and OTP to {phoneNum}. Please enter the code received to verify.</p>
 
         </div>
 
         <form action="" className="" id="otp-form">
           <div className="flex flex-row items-center justify-between gap-4 w-full">
             <input
-              className="border-[1px] h-[75px] rounded-lg w-[75px] border-otpBoxColor Input text-center text-xl outline-none inputBox"
+              className="border-[1px] h-[75px] rounded-lg w-[75px] border-otpBoxColor text-center text-xl outline-none inputBox"
               type="number"
               maxLength="1"
               required
@@ -172,7 +172,7 @@ export default function OtpPage() {
               name="first"
             />
             <input
-              className="border-[1px] h-[75px] rounded-lg w-[75px] border-otpBoxColor Input text-center text-xl outline-none inputBox"
+              className="border-[1px] h-[75px] rounded-lg w-[75px] border-otpBoxColor text-center text-xl outline-none inputBox"
               type="number"
               maxLength="1"
               required
@@ -180,7 +180,7 @@ export default function OtpPage() {
               name="second"
             />
             <input
-              className="border-[1px] h-[75px] rounded-lg w-[75px] border-otpBoxColor Input text-center text-xl outline-none inputBox"
+              className="border-[1px] h-[75px] rounded-lg w-[75px] border-otpBoxColor text-center text-xl outline-none inputBox"
               type="number"
               maxLength="1"
               max="9"
@@ -190,7 +190,7 @@ export default function OtpPage() {
               name="third"
             />
             <input
-              className="border-[1px] h-[75px] rounded-lg w-[75px] border-otpBoxColor appearance-none -webkit-appearance-none text-center text-xl outline-none inputBox"
+              className="border-[1px] h-[75px] rounded-lg w-[75px] border-otpBoxColor text-center text-xl outline-none inputBox"
               type="number"
               maxLength="1"
               required
