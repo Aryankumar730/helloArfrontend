@@ -188,6 +188,14 @@ export default function SongSection() {
         togglePlayPause();
     }
 
+    useEffect(() => {
+
+        if(data.length == 1){
+            setCurrentSongLink(data[0].songLink)
+        }
+
+    },[data])
+
     
 
     return (
@@ -385,8 +393,8 @@ export default function SongSection() {
                         <TableHead>
                             <TableRow>
                                 <TableCell>SONG NAME</TableCell>
-                                <TableCell align="right">SOURCE</TableCell>
-                                <TableCell align="right">ADDED ON</TableCell>
+                                <TableCell align="center">SOURCE</TableCell>
+                                <TableCell align="center">ADDED ON</TableCell>
                                 <TableCell align="right"></TableCell>
                                 <TableCell align="right"></TableCell>
                             </TableRow>
@@ -411,8 +419,8 @@ export default function SongSection() {
 
                                         </div>
                                     </TableCell>
-                                    <TableCell align="right">{TruncatedString(element.songLink)}</TableCell>
-                                    <TableCell align="right">{element.songSource}</TableCell>
+                                    <TableCell align="center">{TruncatedString(element.songLink)}</TableCell>
+                                    <TableCell align="center">{element.songSource}</TableCell>
                                     <TableCell align="center" onClick={() => { onClickPlayCurrentRecord(element) }}> <img src={playIcon} alt="PlayIcon" className=' w-[40px] h-[40px] ml-28 cursor-pointer' />  </TableCell>
                                     <TableCell align="center" onClick={() => { onClickDeleteRecord(element.songName) }}> <img src={deleteIcon} alt="DeleteIcon" className=' w-[14px] h-[14px] mr-10 cursor-pointer' /> </TableCell>
                                 </TableRow>
@@ -464,7 +472,7 @@ export default function SongSection() {
                                 <img src={backIcon} alt="backIcon" className=' w-[24px] h-[24px] cursor-pointer' />
 
                             </button>
-                            <button onClick={togglePlayPause} className={styles.playPause}>
+                            <button onClick={togglePlayPause} className={styles.playPause} disabled={currentSongLink == ""}>
                                 {isPlaying ? <PauseIcon /> : <PlayCircleIcon className={styles.play} />}
                             </button>
                             <button className={styles.forwardBackward} onClick={forwardThirty}>

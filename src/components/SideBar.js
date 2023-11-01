@@ -30,10 +30,10 @@ export default function SideBar() {
                 </p>
             </div>
 
-            <div className='flex gap-[10px] items-center hover:bg-[#E6F7FF] pr-[60px] py-4 pl-6 w-full cursor-pointer mt-4 absolute bottom-0 '>
+            <div className='flex gap-[10px] items-center hover:bg-[#E6F7FF] pr-[60px] py-4 pl-6 w-full cursor-pointer mt-4 absolute bottom-0 ' onClick={onClickLogout}>
 
                 <img src={LogoutIcon} alt="Profile" className=' w-[16px] h-[16px]' />
-                <p className=' text-base font-medium tracking-tight' onClick={onClickLogout}>
+                <p className=' text-base font-medium tracking-tight' >
                     Logout
                 </p>
 

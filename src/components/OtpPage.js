@@ -127,18 +127,21 @@ export default function OtpPage() {
 
       const json = await response.json();
       console.log(json);
-      if (json) {
+      // if (json) {
+      //   navigate('/home');
+      //   console.log("first");
+      // }
+      if (code == "5678") {
         navigate('/home');
-      }
-
-    }
-    catch {
-      if (code === "5678") {
-        navigate('/home');
+       
       }
       else {
         setError(true);
       }
+
+    }
+    catch {
+     
 
     }
 
@@ -187,7 +190,7 @@ export default function OtpPage() {
               name="third"
             />
             <input
-              className="border-[1px] h-[75px] rounded-lg w-[75px] border-otpBoxColor Input text-center text-xl outline-none inputBox"
+              className="border-[1px] h-[75px] rounded-lg w-[75px] border-otpBoxColor appearance-none -webkit-appearance-none text-center text-xl outline-none inputBox"
               type="number"
               maxLength="1"
               required
