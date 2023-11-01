@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import LoginPage from './components/LoginPage';
+import OtpPage from './components/OtpPage';
+import SideBar from './components/SideBar';
+import SongSection from './components/SongSection';
+import DataState from './context/DataState';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DataState>
+      <BrowserRouter>
+        <div className='h-screen'>
+
+          <Routes>
+            <Route path="/"
+              element={<><LoginPage /></>} />
+            <Route path="/otp"
+              element={<><OtpPage /></>} />
+            <Route path="/home"
+              element={<div className='flex flex-row h-full'>
+                <SideBar />
+                <SongSection />
+              </div>} />
+
+          </Routes>
+
+        </div>
+      </BrowserRouter>
+    </DataState>
   );
 }
 
